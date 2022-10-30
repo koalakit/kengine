@@ -1,0 +1,24 @@
+# 运行用户
+user: www:www
+# 错误日志
+error_log: logs/tengine_errorslog
+
+# tcp服务
+tcp:
+  # nodelay
+  tcp_nodelay: true
+
+# http服务
+http:
+  # 服务
+  server:
+    # 监听端口
+    listen: 80
+    # 服务器名称
+    server_name: example.com
+    # 服务器根目录
+    root: www/example.com
+    
+    # 路径
+    location:
+    - path: /
